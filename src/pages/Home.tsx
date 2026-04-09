@@ -193,14 +193,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── BANNER DE ORIENTACIÓN (Versión Compacta & Informativa) ── */}
-      <section className="py-12 md:py-16 px-6 md:px-8 bg-background">
+      {/* ── BANNER DE ORIENTACIÓN (Versión Minimalista) ── */}
+      <section className="py-16 md:py-20 px-6 md:px-8 bg-background border-y border-outline-variant/10">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-surface-container-low border border-outline-variant/10 rounded-[32px] p-8 md:p-14 flex flex-col lg:flex-row items-center justify-between gap-10"
+            className="flex flex-col lg:flex-row items-center justify-between gap-12"
           >
             <div className="max-w-3xl text-center lg:text-left">
               <h2 className="text-2xl md:text-4xl font-black font-headline tracking-tighter text-on-surface leading-tight mb-4">
@@ -213,7 +213,7 @@ export default function Home() {
             
             <div className="flex flex-col items-center lg:items-end shrink-0 gap-4">
               <a href="https://wa.me/18098178536" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-secondary text-white px-8 md:px-10 py-5 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest hover:bg-secondary/90 transition-all duration-300 shadow-xl shadow-secondary/10 hover:scale-[1.02] active:scale-95 text-center">
+                className="inline-flex items-center gap-3 bg-secondary text-white px-6 md:px-8 py-3.5 md:py-4 rounded-xl font-black text-[10px] md:text-[11px] uppercase tracking-widest hover:bg-secondary/90 transition-all duration-300 shadow-lg shadow-secondary/5 hover:scale-[1.02] active:scale-95 text-center">
                 {WA_SVG} Hablar con un especialista ahora
               </a>
               <span className="text-[10px] font-black uppercase tracking-[0.2em] text-on-surface-variant opacity-40">
