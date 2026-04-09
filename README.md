@@ -10,7 +10,7 @@
 
 **Plataforma digital de experiencia médica concierge para cuidados especializados y atención humana.**
 
-[🌐 Ver Demo en Vivo](https://saludintegral.vercel.app) • [📋 Reportar Issue](https://github.com/soyrobertrd/saludintegral/issues)
+[🌐 Ver Demo en Vivo](https://saludintegral-rouge.vercel.app/) • [📋 Reportar Issue](https://github.com/soyrobertrd/saludintegral/issues)
 
 </div>
 
@@ -27,16 +27,19 @@ El proyecto implementa un sistema de diseño altamente refinado, optimizado para
 ## 🚀 Características Principales
 
 ### 🏠 Portal Público (UX Moderna)
-| Página | Innovación UI/UX |
-|--------|-----------------|
-| **Home** | Hero slider inmersivo, **Bento Grid** de especialidades con micro-interacciones y banner de orientación minimalista |
-| **Unidades Médicas** | Directorio completo de 12 especialidades con diseño de tarjetas premium y accesos rápidos |
-| **Staff Médico** | Perfiles detallados, filtros por especialidad y sistema de reserva simplificado |
-| **Editorial SI+** | Portal de conocimiento médico con artículos destacados, newsletter integrado y tipografía focalizada |
-| **Contacto** | Experiencia de geolocalización integrada y canales directos (WhatsApp Concierge) |
+
+| Página               | Innovación UI/UX                                                                                                    |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Home**             | Hero slider inmersivo, **Bento Grid** de especialidades con micro-interacciones y banner de orientación minimalista |
+| **Unidades Médicas** | Directorio completo de 12 especialidades con diseño de tarjetas premium y accesos rápidos                           |
+| **Staff Médico**     | Perfiles detallados, filtros por especialidad y sistema de reserva simplificado                                     |
+| **Editorial SI+**    | Portal de conocimiento médico con artículos destacados, newsletter integrado y tipografía focalizada                |
+| **Contacto**         | Experiencia de geolocalización integrada y canales directos (WhatsApp Concierge)                                    |
 
 ### 🔐 Portal del Paciente (`/portal`)
+
 Ecosistema centralizado con **6 módulos operativos**:
+
 - **🏥 Dashboard** — Signos vitales en tiempo real y resumen ejecutivo de salud.
 - **📅 Mis Citas** — Gestión inteligente de agenda médica.
 - **🔬 Resultados** — Centro de descarga de laboratorios e imágenes diagnósticas.
@@ -65,18 +68,19 @@ Ecosistema Frontend
 
 Inspirado en los principios de **Material Design 3**, Salud Integral utiliza una paleta cromática que equilibra la vitalidad de la salud con la profundidad de la seriedad médica:
 
-| Capa de Diseño | Valor |
-|----------------|-------|
-| 🟢 **Primario** | `#60B252` — Vitalidad y regeneración |
-| 🔵 **Secundario** | `#0E34A1` — Confianza y rigor clínico |
-| 🖋️ **Tipografía** | `Outfit` (Headlines) + `Inter` (Body) |
-| ✨ **Efectos** | Glassmorphism, Sanctuary Shadows, Micro-latidos |
+| Capa de Diseño    | Valor                                           |
+| ----------------- | ----------------------------------------------- |
+| 🟢 **Primario**   | `#60B252` — Vitalidad y regeneración            |
+| 🔵 **Secundario** | `#0E34A1` — Confianza y rigor clínico           |
+| 🖋️ **Tipografía** | `Outfit` (Headlines) + `Inter` (Body)           |
+| ✨ **Efectos**    | Glassmorphism, Sanctuary Shadows, Micro-latidos |
 
 ---
 
 ## ⚙️ Instalación y Desarrollo
 
 ### Requisitos
+
 - **Node.js** ≥ 20.x
 - **npm** ≥ 10.x
 
@@ -104,9 +108,9 @@ npm run build
 
 La plataforma está optimizada para **Integración Continua (CI/CD)** a través de Vercel.
 
-| Rama | Estado | URL de Producción |
-|------|--------|-------------------|
-| `main` | ![Deploy](https://img.shields.io/badge/Vercel-Success-green?logo=vercel) | [saludintegral.vercel.app](https://saludintegral.vercel.app) |
+| Rama   | Estado                                                                   | URL de Producción                                                   |
+| ------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| `main` | ![Deploy](https://img.shields.io/badge/Vercel-Success-green?logo=vercel) | [saludintegral.vercel.app](https://saludintegral-rouge.vercel.app/) |
 
 ---
 
