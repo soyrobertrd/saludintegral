@@ -193,40 +193,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── BANNER DE EMPATÍA & ACCIÓN ── */}
-      <section className="py-12 md:py-20 px-6 md:px-8 bg-surface-container-lowest">
+      {/* ── BANNER DE ORIENTACIÓN (Versión Compacta & Informativa) ── */}
+      <section className="py-12 md:py-16 px-6 md:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
-          <motion.article 
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative bg-secondary rounded-[40px] md:rounded-[60px] p-12 md:p-24 text-center overflow-hidden shadow-2xl shadow-secondary/20"
+            className="bg-surface-container-low border border-outline-variant/10 rounded-[32px] p-8 md:p-14 flex flex-col lg:flex-row items-center justify-between gap-10"
           >
-            {/* Background Decorative Element */}
-            <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/5 blur-[100px] rounded-full pointer-events-none" />
-            
-            <div className="relative z-10 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-6xl font-black font-headline tracking-tighter text-white leading-[1.1] mb-8">
-                Cuando un familiar necesita atención médica, <span className="text-blue-300 italic">cada decisión importa.</span>
+            <div className="max-w-3xl text-center lg:text-left">
+              <h2 className="text-2xl md:text-4xl font-black font-headline tracking-tighter text-on-surface leading-tight mb-4">
+                Cuando un familiar necesita atención médica, <span className="text-secondary italic">cada decisión importa.</span>
               </h2>
-              <p className="text-lg md:text-2xl text-white/80 font-body leading-relaxed mb-14 max-w-3xl mx-auto">
-                En Salud Integral PSS te acompañamos con claridad, respeto y atención profesional en cada paso.
+              <p className="text-base md:text-lg text-on-surface-variant font-body leading-relaxed opacity-70">
+                En Salud Integral te acompañamos con claridad, respeto y atención profesional en cada paso.
               </p>
-              
-              <div className="flex flex-col items-center gap-6">
-                <a href="https://wa.me/18098178536" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-4 bg-white text-secondary px-10 md:px-14 py-5 md:py-6 rounded-2xl font-black text-sm md:text-base uppercase tracking-widest hover:bg-white/90 transition-all duration-300 shadow-2xl hover:scale-[1.03] hover:-translate-y-1 active:scale-95">
-                  {WA_SVG} Hablar con un especialista ahora
-                </a>
-                
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-white/50">
-                    Respuesta rápida <span className="mx-2 opacity-30">•</span> Atención personalizada
-                  </span>
-                </div>
-              </div>
             </div>
-          </motion.article>
+            
+            <div className="flex flex-col items-center lg:items-end shrink-0 gap-4">
+              <a href="https://wa.me/18098178536" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-secondary text-white px-8 md:px-10 py-5 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest hover:bg-secondary/90 transition-all duration-300 shadow-xl shadow-secondary/10 hover:scale-[1.02] active:scale-95 text-center">
+                {WA_SVG} Hablar con un especialista ahora
+              </a>
+              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-on-surface-variant opacity-40">
+                Respuesta rápida • Atención personalizada
+              </span>
+            </div>
+          </motion.div>
         </div>
       </section>
 
