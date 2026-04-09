@@ -7,7 +7,8 @@ import { ArrowRight, Activity, Users, ShieldCheck, HeartPulse, Stethoscope } fro
 const heroSlides = [
   {
     tag: "CUIDADOS PALIATIVOS & CRÓNICOS",
-    title: "Cuidado médico humano en los momentos que más importan.",
+    title: "Cuidado médico humano",
+    titleAccent: "en los momentos que más importan.",
     desc: "Acompañamos a pacientes y familias con atención paliativa profesional, respeto y cercanía. Usted no está solo en este camino.",
     image: "https://images.unsplash.com/photo-1576765608622-067973a79f53?auto=format&fit=crop&q=80&w=1600",
     primaryAction: "Hablar con un especialista ahora",
@@ -18,7 +19,8 @@ const heroSlides = [
   },
   {
     tag: "ATENCIÓN A DOMICILIO",
-    title: "Atención médica a domicilio, sin complicaciones.",
+    title: "Atención médica a domicilio,",
+    titleAccent: "sin complicaciones.",
     desc: "Llevamos el cuidado hasta tu hogar para mayor comodidad, tranquilidad y seguimiento continuo.",
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1600",
     primaryAction: "Solicitar atención",
@@ -29,11 +31,12 @@ const heroSlides = [
   },
   {
     tag: "ESTAMOS AQUÍ PARA TI",
-    title: "No tienes que pasar por esto solo.",
+    title: "No tienes que pasar",
+    titleAccent: "por esto solo.",
     desc: "Nuestro equipo está listo para orientarte y ayudarte a tomar la mejor decisión para tu familiar.",
     image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=80&w=1600",
     primaryAction: "Escribir por WhatsApp",
-    primaryPath: "https://wa.me/18095550199",
+    primaryPath: "https://wa.me/18098178536",
     secondaryAction: null,
     secondaryPath: null,
     bullets: null
@@ -121,8 +124,9 @@ export default function Home() {
               <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] mb-8 block drop-shadow-sm">
                 {heroSlides[currentSlide].tag}
               </span>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight font-headline tracking-tight max-w-2xl">
-                {heroSlides[currentSlide].title}
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-8 leading-tight font-headline tracking-tight max-w-2xl">
+                {heroSlides[currentSlide].title}{' '}
+                <span className="text-blue-300">{heroSlides[currentSlide].titleAccent}</span>
               </h1>
               <p className="text-lg text-white/85 mb-8 leading-relaxed font-body max-w-xl">
                 {heroSlides[currentSlide].desc}
@@ -181,18 +185,18 @@ export default function Home() {
               </div>
             </motion.div>
           </AnimatePresence>
+        </div>
 
-          {/* Centered Slider Indicators at the absolute end (bottom) */}
-          <div className="absolute -bottom-6 left-0 w-full flex justify-center items-center z-20 pointer-events-none">
-             <div className="flex gap-3 pointer-events-auto">
-                {heroSlides.map((_, idx) => (
-                   <button 
-                    key={idx} 
-                    onClick={() => setCurrentSlide(idx)}
-                    className={`h-1.5 rounded-full transition-all duration-500 hover:bg-primary ${currentSlide === idx ? 'w-16 bg-primary' : 'w-8 bg-white/30'}`} 
-                   />
-                ))}
-             </div>
+        {/* Slider Indicators — fixed at bottom of hero */}
+        <div className="absolute bottom-[10px] left-0 w-full flex justify-center items-center z-20">
+          <div className="flex gap-3">
+            {heroSlides.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentSlide(idx)}
+                className={`h-1.5 rounded-full transition-all duration-500 hover:bg-primary ${currentSlide === idx ? 'w-16 bg-primary' : 'w-8 bg-white/30'}`}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -360,6 +364,184 @@ export default function Home() {
                </motion.article>
              ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── SECCIÓN 2: ¿Cómo podemos ayudarte? ── */}
+      <section className="py-24 px-8 bg-surface-container-lowest border-t border-outline-variant/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] mb-4 block">Nuestros Servicios</span>
+            <h2 className="text-3xl md:text-5xl font-black font-headline tracking-tighter text-on-surface">¿Cómo podemos ayudarte?</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { emoji: "🏠", title: "Atención médica a domicilio", desc: "Llevamos el cuidado hasta tu hogar, evitando traslados innecesarios y brindando mayor comodidad al paciente." },
+              { emoji: "💙", title: "Cuidados paliativos", desc: "Acompañamiento profesional enfocado en mejorar la calidad de vida del paciente y brindar apoyo a la familia." },
+              { emoji: "📋", title: "Seguimiento médico continuo", desc: "Evaluación constante para adaptar el tratamiento según la evolución del paciente." },
+              { emoji: "👨‍👩‍👧", title: "Orientación a familiares", desc: "Te ayudamos a entender cada paso para tomar decisiones con mayor tranquilidad." }
+            ].map((card, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white border border-outline-variant/10 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-primary/20 transition-all group"
+              >
+                <div className="text-4xl mb-6">{card.emoji}</div>
+                <h3 className="font-black text-on-surface font-headline text-lg mb-3 leading-tight group-hover:text-primary transition-colors">{card.title}</h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed opacity-70">{card.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECCIÓN 3: Proceso simple ── */}
+      <section className="py-24 px-8 bg-background">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] mb-4 block">Así Funciona</span>
+            <h2 className="text-3xl md:text-5xl font-black font-headline tracking-tighter text-on-surface">Recibir atención es más fácil de lo que imaginas</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+            {/* Línea conectora (solo desktop) */}
+            <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-outline-variant/20 z-0" />
+            {[
+              { num: "01", title: "Escríbenos por WhatsApp", desc: "Cuéntanos tu situación y te orientamos de inmediato." },
+              { num: "02", title: "Evaluamos el caso", desc: "Nuestro equipo médico analiza la necesidad del paciente." },
+              { num: "03", title: "Coordinamos la atención", desc: "Agendamos la visita en el lugar y momento adecuado." },
+              { num: "04", title: "Acompañamiento continuo", desc: "Damos seguimiento para garantizar el bienestar del paciente." }
+            ].map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="relative z-10 flex flex-col items-center text-center"
+              >
+                <div className="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20 mb-6">
+                  <span className="text-white font-black text-lg font-headline">{step.num}</span>
+                </div>
+                <h3 className="font-black text-on-surface font-headline text-base mb-3 leading-tight">{step.title}</h3>
+                <p className="text-xs text-on-surface-variant opacity-70 leading-relaxed max-w-[180px]">{step.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECCIÓN 4: Bloque emocional ── */}
+      <section className="py-24 px-8 bg-surface-container-lowest border-y border-outline-variant/10">
+        <div className="max-w-3xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-5xl mb-8">🤝</div>
+            <p className="text-2xl md:text-4xl font-black font-headline tracking-tight text-on-surface leading-tight mb-6">
+              Sabemos que estás pasando por un momento delicado.
+            </p>
+            <p className="text-lg text-on-surface-variant leading-relaxed mb-4 opacity-80">
+              Tomar decisiones médicas no siempre es fácil, y por eso nuestro equipo está aquí para acompañarte con respeto, claridad y compromiso.
+            </p>
+            <p className="text-sm font-black text-primary uppercase tracking-widest mb-10">
+              No solo atendemos pacientes, acompañamos familias.
+            </p>
+            <a
+              href="https://wa.me/18098178536"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-primary text-on-primary px-12 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl shadow-primary/20"
+            >
+              <svg viewBox="0 0 32 32" className="w-5 h-5 fill-current"><path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732.737 5.291 2.022 7.491l-2.147 7.772 7.949-2.083a14.83 14.83 0 007.108 1.813h.006c8.208 0 14.862-6.656 14.862-14.865 0-4.103-1.662-7.817-4.349-10.507l-.075-.132zM16.062 28.228h-.005a12.3 12.3 0 01-6.399-1.784l-.457-.272-4.749 1.245 1.268-4.628-.298-.474a12.335 12.335 0 01-1.889-6.565c0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353l-.824.125z"/></svg>
+              Hablar con un especialista ahora
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── SECCIÓN 5: ¿Por qué elegir Salud Integral? ── */}
+      <section className="py-24 px-8 bg-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] mb-4 block">Nuestro Diferencial</span>
+              <h2 className="text-3xl md:text-5xl font-black font-headline tracking-tighter text-on-surface mb-8 leading-tight">¿Por qué elegir Salud Integral PSS?</h2>
+              <div className="space-y-4">
+                {[
+                  "Atención centrada en el paciente y su entorno",
+                  "Enfoque humano en cada etapa del proceso",
+                  "Comodidad de atención en el hogar",
+                  "Comunicación clara y constante",
+                  "Equipo comprometido con el bienestar integral"
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.08 }}
+                    className="flex items-start gap-4"
+                  >
+                    <div className="w-6 h-6 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg viewBox="0 0 12 10" fill="none" className="w-3 h-2.5"><path d="M1 5l3 3 7-7" stroke="#1a4fc4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </div>
+                    <p className="text-sm font-medium text-on-surface leading-relaxed">{item}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative rounded-3xl overflow-hidden aspect-4/3 border border-outline-variant/5 shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80&w=900"
+                alt="Atención médica humana"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-on-surface/30 to-transparent" />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECCIÓN 6: Contacto rápido (Cierre directo) ── */}
+      <section className="py-20 px-8 bg-[#1a4fc4]">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-5xl font-black font-headline tracking-tighter text-white mb-6 leading-tight">Estamos aquí para ayudarte</h2>
+            <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+              Si necesitas orientación o deseas coordinar atención, puedes escribirnos directamente. Nuestro equipo te responderá lo antes posible.
+            </p>
+            <a
+              href="https://wa.me/18098178536"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-4 bg-white text-[#1a4fc4] px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-white/90 transition-all shadow-2xl shadow-black/20 mb-6"
+            >
+              <svg viewBox="0 0 32 32" className="w-6 h-6 fill-current"><path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732.737 5.291 2.022 7.491l-2.147 7.772 7.949-2.083a14.83 14.83 0 007.108 1.813h.006c8.208 0 14.862-6.656 14.862-14.865 0-4.103-1.662-7.817-4.349-10.507l-.075-.132zM16.062 28.228h-.005a12.3 12.3 0 01-6.399-1.784l-.457-.272-4.749 1.245 1.268-4.628-.298-.474a12.335 12.335 0 01-1.889-6.565c0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353l-.824.125z"/></svg>
+              Escribir por WhatsApp
+            </a>
+            <div className="flex flex-col items-center gap-2">
+              <a href="tel:+18098178536" className="text-white font-black text-xl tracking-wide hover:text-white/80 transition-colors">📱 (809) 817-8536</a>
+              <p className="text-white/50 text-xs font-medium uppercase tracking-widest">Atención en Santo Domingo y zonas cercanas</p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
