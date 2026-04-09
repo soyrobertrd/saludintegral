@@ -6,31 +6,37 @@ import { ArrowRight, Activity, Users, ShieldCheck, HeartPulse, Stethoscope } fro
 
 const heroSlides = [
   {
-    tag: "ATENCIÓN CONSERJE DE CLASE MUNDIAL",
-    title: "Excelencia Médica.",
-    desc: "Bienvenido a Salud Integral, donde la pericia médica se encuentra con la hospitalidad a medida. Experimente un nuevo estándar de cuidado personalizado diseñado para su vida.",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1600",
-    primaryAction: "Encontrar Especialista",
-    secondaryAction: "Tour Virtual",
-    color: "primary"
+    tag: "CUIDADOS PALIATIVOS & CRÓNICOS",
+    title: "Cuidado médico humano en los momentos que más importan.",
+    desc: "Acompañamos a pacientes y familias con atención paliativa profesional, respeto y cercanía. Usted no está solo en este camino.",
+    image: "https://images.unsplash.com/photo-1576765608622-067973a79f53?auto=format&fit=crop&q=80&w=1600",
+    primaryAction: "Hablar con un especialista ahora",
+    primaryPath: "/contact",
+    secondaryAction: "Ver cómo podemos ayudarte",
+    secondaryPath: "/palliative-care",
+    bullets: null
   },
   {
-    tag: "DIAGNÓSTICOS AVANZADOS",
-    title: "Precisión Total.",
-    desc: "Nuestro laboratorio Bio-Bóveda utiliza tecnología de vanguardia para asegurar los diagnósticos más precisos para su salud.",
-    image: "https://plus.unsplash.com/premium_photo-1676325101995-cdfc26d820bb?auto=format&fit=crop&q=80&w=1600",
-    primaryAction: "Ver Especialidades",
-    secondaryAction: "Agendar Analítica",
-    color: "secondary"
+    tag: "ATENCIÓN A DOMICILIO",
+    title: "Atención médica a domicilio, sin complicaciones.",
+    desc: "Llevamos el cuidado hasta tu hogar para mayor comodidad, tranquilidad y seguimiento continuo.",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1600",
+    primaryAction: "Solicitar atención",
+    primaryPath: "/booking",
+    secondaryAction: null,
+    secondaryPath: null,
+    bullets: ["Evaluación médica en casa", "Seguimiento personalizado", "Atención para pacientes crónicos y paliativos"]
   },
   {
-    tag: "CONTINUIDAD COMPASIVA",
-    title: "Dignidad Humana.",
-    desc: "Programas especializados en cuidados crónicos y paliativos diseñados para brindar confort y soporte profesional a las familias.",
-    image: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=1600",
-    primaryAction: "Detalles del Programa",
-    secondaryAction: "Contactar Soporte",
-    color: "tertiary"
+    tag: "ESTAMOS AQUÍ PARA TI",
+    title: "No tienes que pasar por esto solo.",
+    desc: "Nuestro equipo está listo para orientarte y ayudarte a tomar la mejor decisión para tu familiar.",
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=80&w=1600",
+    primaryAction: "Escribir por WhatsApp",
+    primaryPath: "https://wa.me/18095550199",
+    secondaryAction: null,
+    secondaryPath: null,
+    bullets: null
   }
 ];
 
@@ -115,19 +121,63 @@ export default function Home() {
               <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] mb-8 block drop-shadow-sm">
                 {heroSlides[currentSlide].tag}
               </span>
-              <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-none font-headline tracking-tighter">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight font-headline tracking-tight max-w-2xl">
                 {heroSlides[currentSlide].title}
               </h1>
-              <p className="text-xl text-white/80 mb-12 leading-relaxed font-body max-w-xl opacity-90">
+              <p className="text-lg text-white/85 mb-8 leading-relaxed font-body max-w-xl">
                 {heroSlides[currentSlide].desc}
               </p>
-              <div className="flex flex-wrap gap-6">
-                <Link to="/staff" className="bg-primary text-on-primary px-12 py-5 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl shadow-primary/20">
-                  {heroSlides[currentSlide].primaryAction}
-                </Link>
-                <Link to="/contact" className="bg-white/10 backdrop-blur-md text-white px-12 py-5 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-on-surface transition-all border border-white/20">
-                  {heroSlides[currentSlide].secondaryAction}
-                </Link>
+
+              {/* Bullets (slide 2) */}
+              {heroSlides[currentSlide].bullets && (
+                <ul className="mb-10 space-y-3">
+                  {heroSlides[currentSlide].bullets!.map((b, i) => (
+                    <li key={i} className="flex items-center gap-3 text-white/90 text-sm font-medium">
+                      <span className="w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0">
+                        <svg viewBox="0 0 12 10" fill="none" className="w-3 h-2.5"><path d="M1 5l3 3 7-7" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <div className="flex flex-col items-start gap-3">
+                <div className="flex flex-wrap gap-4">
+                  {heroSlides[currentSlide].primaryPath?.startsWith('http') ? (
+                    <a
+                      href={heroSlides[currentSlide].primaryPath!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-primary text-on-primary px-10 py-5 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl shadow-primary/20"
+                    >
+                      {heroSlides[currentSlide].primaryAction}
+                    </a>
+                  ) : (
+                    <Link
+                      to={heroSlides[currentSlide].primaryPath!}
+                      className="bg-primary text-on-primary px-10 py-5 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl shadow-primary/20"
+                    >
+                      {heroSlides[currentSlide].primaryAction}
+                    </Link>
+                  )}
+
+                  {heroSlides[currentSlide].secondaryAction && heroSlides[currentSlide].secondaryPath && (
+                    <Link
+                      to={heroSlides[currentSlide].secondaryPath!}
+                      className="bg-white/10 backdrop-blur-md text-white px-10 py-5 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-on-surface transition-all border border-white/20"
+                    >
+                      {heroSlides[currentSlide].secondaryAction}
+                    </Link>
+                  )}
+                </div>
+
+                {/* Microtexto slide 3 */}
+                {currentSlide === 2 && (
+                  <p className="text-white/50 text-[10px] font-medium tracking-wide">
+                    Respuesta rápida y orientación sin compromiso
+                  </p>
+                )}
               </div>
             </motion.div>
           </AnimatePresence>
