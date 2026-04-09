@@ -132,7 +132,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4 ml-6">
             <Link 
               to="/portal" 
-              className={`px-6 py-2.5 rounded-xl text-sm font-black uppercase tracking-widest transition-all duration-300 border 
+              className={`px-4 py-2.5 rounded-xl text-sm font-black uppercase tracking-widest transition-all duration-300 border 
               ${isScrolled || location.pathname !== '/' 
                 ? 'text-on-surface border-outline-variant/10 hover:bg-surface-container-high hover:border-primary/20' 
                 : 'text-white border-white/20 hover:bg-white/10'
@@ -142,7 +142,7 @@ export default function Navbar() {
             </Link>
             <Link 
               to="/booking" 
-              className="bg-primary text-on-primary px-6 py-2.5 rounded-xl text-sm font-black uppercase tracking-widest hover:bg-primary-container transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-xl hover:scale-[1.02] hover:-translate-y-0.5 active:scale-95"
+              className="bg-primary text-on-primary px-4 py-2.5 rounded-xl text-sm font-black uppercase tracking-widest hover:bg-primary-container transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-xl hover:scale-[1.02] hover:-translate-y-0.5 active:scale-95"
             >
               Agendar Cita
             </Link>

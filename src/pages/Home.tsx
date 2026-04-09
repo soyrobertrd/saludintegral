@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Stethoscope } from 'lucide-react';
+import { ArrowRight, Stethoscope, Heart, Brain, Baby, Microscope, CalendarDays } from 'lucide-react';
 
 const heroSlides = [
   {
@@ -293,39 +293,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Portafolio Clínico ── */}
-      <section className="py-20 md:py-32 max-w-7xl mx-auto px-6 md:px-8 bg-surface-container-low border-y border-outline-variant/5 rounded-4xl">
-        <div className="text-center mb-16 md:mb-24 max-w-3xl mx-auto">
-          <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] mb-4 block">PORTAFOLIO CLÍNICO</span>
-          <h2 className="text-3xl md:text-6xl font-black mb-8 font-headline tracking-tighter leading-tight">Especialidades con Enfoque Humano</h2>
-          <p className="text-lg md:text-xl text-on-surface-variant font-body opacity-80 leading-relaxed">Infraestructura diseñada para la gestión clínica de alto nivel, fusionando tecnología y empatía.</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            { title: "Consultas Especializadas", link: "/services", img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" },
-            { title: "Analíticas Avanzadas", link: "/labs", img: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=400" },
-            { title: "Cuidados Crónicos", link: "/chronic-care", img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=400" },
-            { title: "Cuidados Paliativos", link: "/palliative-care", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=400" }
-          ].map((area, idx) => (
-            <motion.article key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-              className="group rounded-3xl bg-white border border-outline-variant/10 shadow-sm overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:border-primary/20">
-              <div className="h-56 overflow-hidden">
-                <img 
-                  src={area.img} 
-                  alt={area.title} 
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 brightness-90 group-hover:brightness-100" 
-                />
-              </div>
-              <div className="p-10 flex flex-col flex-1">
-                <h3 className="text-xl font-black mb-6 font-headline tracking-tighter group-hover:text-primary transition-colors">{area.title}</h3>
-                <Link to={area.link} className="mt-auto flex items-center gap-2 text-xs font-black uppercase tracking-widest text-primary group-hover:gap-4 transition-all duration-300">
-                  Recibir orientación <ArrowRight size={14} />
+      {/* ── Especialidades Médicas (Premium Bento Grid) ── */}
+      <section className="py-20 md:py-32 bg-surface-container-low border-y border-outline-variant/5">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+            <div className="max-w-2xl">
+              <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] mb-4 block">NUESTRO NÚCLEO CLÍNICO</span>
+              <h2 className="text-3xl md:text-6xl font-black font-headline tracking-tighter text-on-surface leading-tight">Especialidades Médicas</h2>
+            </div>
+            <Link to="/medical-units" className="flex items-center gap-3 text-sm font-black uppercase tracking-widest text-primary hover:gap-5 transition-all duration-300 group">
+              Explorar las 24 Unidades <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Cardiología", desc: "Detección avanzada y manejo de ritmo cardíaco con especialistas de alto nivel.", icon: <Heart size={28} />, color: "bg-red-500/10 text-red-600", delay: 0 },
+              { title: "Neurología", desc: "Cuidado integral para la salud neurológica, detección temprana y terapias modernas.", icon: <Brain size={28} />, color: "bg-blue-500/10 text-blue-600", delay: 0.1 },
+              { title: "Pediatría", desc: "Ambiente pediátrico de alta gama diseñado para la comodidad y salud infantil.", icon: <Baby size={28} />, color: "bg-yellow-500/10 text-yellow-600", delay: 0.2 },
+              { title: "Diagnóstico", desc: "Laboratorio e imágenes de última generación con entrega inmediata de resultados.", icon: <Microscope size={28} />, color: "bg-emerald-500/10 text-emerald-600", delay: 0.3 }
+            ].map((item, i) => (
+              <motion.article 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: item.delay }}
+                className="group bg-surface-container-lowest p-8 rounded-4xl border border-outline-variant/10 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/5 shadow-sm"
+              >
+                <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
+                  {item.icon}
+                </div>
+                <h3 className="font-headline text-xl font-black mb-3 text-on-surface group-hover:text-primary transition-colors">{item.title}</h3>
+                <p className="font-body text-sm text-on-surface-variant mb-8 leading-relaxed opacity-70">{item.desc}</p>
+                <Link 
+                  to="/booking" 
+                  className="w-full py-4 rounded-xl border border-primary text-primary font-black text-[9px] uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-2"
+                >
+                  Agendar Cita <CalendarDays size={14} />
                 </Link>
-              </div>
-            </motion.article>
-          ))}
+              </motion.article>
+            ))}
+          </div>
         </div>
       </section>
 

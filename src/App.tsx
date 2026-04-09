@@ -22,6 +22,7 @@ import PostDetail from './pages/PostDetail';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import PatientRights from './pages/PatientRights';
+import MedicalUnits from './pages/MedicalUnits';
 
 // Static stub for Compliance if needed, or redirect to Terms
 const Compliance = () => <div className="pt-32 px-8 max-w-7xl mx-auto"><h1 className="text-4xl font-black">Cumplimiento Normativo</h1><p className="mt-8 text-on-surface-variant">Documentación de cumplimiento en proceso de carga.</p></div>;
@@ -43,6 +44,7 @@ function App() {
           <Route path="portal" element={<PatientPortal />} />
           <Route path="booking" element={<Booking />} />
           <Route path="about" element={<About />} />
+          <Route path="medical-units" element={<MedicalUnits />} />
           
           <Route path="staff" element={<Staff />} />
           <Route path="staff/:id" element={<DoctorDetail />} />
