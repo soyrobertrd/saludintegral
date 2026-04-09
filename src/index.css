@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Brand Colors Refinement */
+  --color-primary: #60B252;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #dcffd8;
+  --color-on-primary-container: #002202;
+
+  --color-secondary: #0E34A1;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #d9e2ff;
+  --color-on-secondary-container: #001945;
+
+  --color-background: #fdfdfd;
+  --color-on-background: #1a1c1e;
+
+  --color-surface: #fdfdfd;
+  --color-on-surface: #1a1c1e;
+  --color-surface-variant: #e0e2ec;
+  --color-on-surface-variant: #44474e;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f7f9fd;
+  --color-surface-container: #f1f3f9;
+  --color-surface-container-high: #ebeef3;
+  --color-surface-container-highest: #e5e8ed;
+
+  --color-inverse-surface: #0E34A1; /* Replaced with brand secondary */
+  --color-inverse-on-surface: #ffffff;
+
+  --color-outline: #74777f;
+  --color-outline-variant: #c4c6cf;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-body antialiased selection:bg-primary selection:text-on-primary;
+  }
+}
+
+.sanctuary-shadow {
+  box-shadow: 0 20px 80px -20px rgba(96, 178, 82, 0.12);
+}
+
+.medical-gradient {
+  background: linear-gradient(135deg, rgba(96, 178, 82, 0.05) 0%, rgba(14, 52, 161, 0.05) 100%);
+}
