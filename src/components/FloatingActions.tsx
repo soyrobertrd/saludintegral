@@ -28,7 +28,7 @@ export default function FloatingActions() {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+    <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 flex flex-col gap-3 md:gap-4 z-50">
       <AnimatePresence>
         {showScroll && (
           <motion.button
@@ -36,24 +36,26 @@ export default function FloatingActions() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.5, y: 20 }}
             onClick={scrollToTop}
-            className="w-14 h-14 bg-on-surface text-white rounded-2xl flex items-center justify-center shadow-2xl hover:bg-primary transition-all group"
+            className="w-11 h-11 md:w-14 md:h-14 bg-on-surface text-white rounded-xl md:rounded-2xl flex items-center justify-center shadow-2xl hover:bg-primary transition-all group"
             title="Volver Arriba"
           >
-            <ArrowUp size={24} className="group-hover:-translate-y-1 transition-transform" />
+            <ArrowUp size={20} className="md:size-6 group-hover:-translate-y-1 transition-transform" />
           </motion.button>
         )}
       </AnimatePresence>
 
       <motion.a
-        href="https://wa.me/1234567890"
+        href="https://wa.me/18098178536"
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:bg-[#128C7E] transition-all"
+        className="w-13 h-13 md:w-16 md:h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:bg-[#128C7E] transition-all"
         title="Contactar por WhatsApp"
       >
-        <WhatsAppIcon />
+        <div className="scale-75 md:scale-100">
+          <WhatsAppIcon />
+        </div>
       </motion.a>
     </div>
   );
