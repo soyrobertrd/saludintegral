@@ -108,7 +108,7 @@ export default function Home() {
               src={heroSlides[currentSlide].image} 
               className="w-full h-full object-cover brightness-[0.75]" 
               alt="Hero" 
-              fetchpriority={currentSlide === 0 ? "high" : "auto"}
+              fetchPriority={currentSlide === 0 ? "high" : "auto"}
               loading={currentSlide === 0 ? "eager" : "lazy"}
               decoding="async"
             />
