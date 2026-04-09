@@ -193,24 +193,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECCIÓN DE EMPATÍA ── */}
-      <section className="py-16 md:py-24 px-6 md:px-8 bg-surface-container-lowest overflow-hidden">
-        <div className="max-w-4xl mx-auto">
+      {/* ── BANNER DE EMPATÍA & ACCIÓN ── */}
+      <section className="py-12 md:py-20 px-6 md:px-8 bg-surface-container-lowest">
+        <div className="max-w-7xl mx-auto">
           <motion.article 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative border-l-4 border-primary pl-8 md:pl-16 py-4"
+            className="relative bg-secondary rounded-[40px] md:rounded-[60px] p-12 md:p-24 text-center overflow-hidden shadow-2xl shadow-secondary/20"
           >
-            <div className="absolute -left-1 text-primary animate-pulse">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            {/* Background Decorative Element */}
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/5 blur-[100px] rounded-full pointer-events-none" />
+            
+            <div className="relative z-10 max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-6xl font-black font-headline tracking-tighter text-white leading-[1.1] mb-8">
+                Cuando un familiar necesita atención médica, <span className="text-blue-300 italic">cada decisión importa.</span>
+              </h2>
+              <p className="text-lg md:text-2xl text-white/80 font-body leading-relaxed mb-14 max-w-3xl mx-auto">
+                En Salud Integral PSS te acompañamos con claridad, respeto y atención profesional en cada paso.
+              </p>
+              
+              <div className="flex flex-col items-center gap-6">
+                <a href="https://wa.me/18098178536" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-4 bg-white text-secondary px-10 md:px-14 py-5 md:py-6 rounded-2xl font-black text-sm md:text-base uppercase tracking-widest hover:bg-white/90 transition-all duration-300 shadow-2xl hover:scale-[1.03] hover:-translate-y-1 active:scale-95">
+                  {WA_SVG} Hablar con un especialista ahora
+                </a>
+                
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-white/50">
+                    Respuesta rápida <span className="mx-2 opacity-30">•</span> Atención personalizada
+                  </span>
+                </div>
+              </div>
             </div>
-            <h2 className="text-2xl md:text-4xl font-black font-headline tracking-tighter text-on-surface leading-tight mb-4">
-              Cuando un familiar necesita atención médica, <span className="text-primary italic">cada decisión importa.</span>
-            </h2>
-            <p className="text-lg md:text-xl text-on-surface-variant font-body leading-relaxed opacity-80 decoration-primary/20 decoration-2 underline-offset-8">
-              En Salud Integral PSS te acompañamos con claridad, respeto y atención profesional en cada paso.
-            </p>
           </motion.article>
         </div>
       </section>
