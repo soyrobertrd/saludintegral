@@ -116,7 +116,7 @@ export default function Home() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="max-w-7xl mx-auto w-full px-8 relative z-10">
+        <div className="max-w-7xl mx-auto w-full px-8 relative z-10 pt-24 md:pt-16">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -129,7 +129,7 @@ export default function Home() {
               <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] mb-8 block drop-shadow-sm">
                 {heroSlides[currentSlide].tag}
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white mb-6 md:mb-8 leading-[1.1] md:leading-tight font-headline tracking-tight max-w-2xl transition-all duration-500">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-6 md:mb-8 leading-[1.1] md:leading-tight font-headline tracking-tight max-w-2xl transition-all duration-500">
                 {heroSlides[currentSlide].title}{' '}
                 <span className="text-blue-300">{heroSlides[currentSlide].titleAccent}</span>
               </h1>
