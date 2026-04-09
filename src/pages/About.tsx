@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Target, Eye, ShieldCheck, Heart, CheckCircle2 } from 'lucide-react';
+import { Target, Eye, ShieldCheck, Heart, CheckCircle2, Users, Activity, HeartPulse } from 'lucide-react';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 export default function About() {
   const coreValues = [
@@ -68,6 +69,64 @@ export default function About() {
             <div className="absolute -bottom-6 -left-6 bg-white p-8 rounded-2xl shadow-lg border border-outline-variant/10 max-w-[240px] hidden md:block">
               <p className="text-sm font-bold text-on-surface leading-snug">"Un diagnóstico preciso es el primer paso hacia la dignidad de vida."</p>
               <div className="mt-4 text-[9px] font-black uppercase tracking-widest text-primary">— Dirección Ejecutiva</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Estadísticas */}
+        <section className="mb-32">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="md:col-span-6 lg:col-span-5 bg-primary/5 rounded-3xl p-12 border border-primary/10 flex flex-col justify-between relative group overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <Users className="text-primary mb-12 group-hover:scale-110 transition-transform" size={48} />
+              <div>
+                <div className="text-5xl lg:text-7xl font-black text-on-surface font-headline mb-4 tracking-tighter group-hover:text-primary transition-colors">
+                  <AnimatedCounter value={15} suffix="k+" />
+                </div>
+                <p className="text-[10px] font-black text-on-surface-variant uppercase tracking-[0.2em] opacity-60">Consultas Especializadas Realizadas</p>
+              </div>
+            </motion.div>
+
+            <div className="md:col-span-6 lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                className="bg-secondary/5 rounded-3xl p-10 border border-secondary/10 group hover:bg-white transition-all shadow-sm hover:shadow-lg"
+              >
+                <Activity className="text-secondary mb-8 group-hover:rotate-12 transition-transform" size={32} />
+                <div className="text-4xl font-black text-on-surface font-headline mb-2 group-hover:text-secondary transition-colors">
+                  <AnimatedCounter value={98} suffix="%" />
+                </div>
+                <p className="text-[9px] font-black text-on-surface-variant uppercase tracking-widest opacity-60">Satisfacción Directa</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                className="bg-tertiary/5 rounded-3xl p-10 border border-tertiary/10 group hover:bg-white transition-all shadow-sm hover:shadow-lg"
+              >
+                <ShieldCheck className="text-tertiary mb-8 group-hover:scale-110 transition-transform" size={32} />
+                <div className="text-4xl font-black text-on-surface font-headline mb-2 group-hover:text-tertiary transition-colors">
+                  <AnimatedCounter value={120} suffix="+" />
+                </div>
+                <p className="text-[9px] font-black text-on-surface-variant uppercase tracking-widest opacity-60">Convenios ARS Premium</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                className="sm:col-span-2 bg-on-surface/5 rounded-3xl p-10 border border-outline-variant/5 flex items-center gap-8 group hover:bg-white transition-all shadow-sm hover:shadow-lg"
+              >
+                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center border border-outline-variant/10 group-hover:border-primary/20 transition-all">
+                  <HeartPulse className="text-primary animate-pulse" size={32} />
+                </div>
+                <div>
+                  <h4 className="text-xl font-black font-headline tracking-tighter uppercase group-hover:text-primary transition-colors">Gestión de Casos SI+</h4>
+                  <p className="text-[9px] text-on-surface-variant uppercase tracking-[0.2em] font-black opacity-40">Monitoreo activo las 24 horas</p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
