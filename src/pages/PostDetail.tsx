@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Clock, Calendar, User, Share2, Bookmark } from 'lucide-react';
+import { ArrowLeft, Clock, User, Share2, Bookmark } from 'lucide-react';
 
 const posts = [
   {

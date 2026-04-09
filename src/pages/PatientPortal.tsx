@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type ReactElement } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -479,7 +479,7 @@ export default function PatientPortal() {
     );
   }
 
-  const views: Record<string, JSX.Element> = {
+  const views: Record<string, ReactElement> = {
     dashboard: <DashboardView />,
     citas: <AppointmentsView />,
     resultados: <ResultsView />,
