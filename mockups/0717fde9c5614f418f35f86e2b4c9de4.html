@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Salud Integral | Premium Medical Specialties</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-surface": "#2e3132",
+                        "on-surface": "#191c1d",
+                        "on-secondary-fixed-variant": "#00531a",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#191c1d",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary-container": "#0056b3",
+                        "primary-fixed": "#d7e2ff",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary-fixed-dim": "#66df75",
+                        "surface-container": "#edeeef",
+                        "outline-variant": "#c2c6d4",
+                        "on-primary-fixed": "#001a40",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#115cb9",
+                        "on-primary-fixed-variant": "#004491",
+                        "secondary-container": "#80f98b",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "on-surface-variant": "#424752",
+                        "on-secondary-fixed": "#002106",
+                        "primary-fixed-dim": "#acc7ff",
+                        "on-secondary-container": "#007327",
+                        "on-tertiary-container": "#ffc2a7",
+                        "inverse-primary": "#acc7ff",
+                        "outline": "#727784",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "secondary-fixed": "#83fc8e",
+                        "on-tertiary-fixed": "#351000",
+                        "on-error-container": "#93000a",
+                        "surface": "#f8f9fa",
+                        "tertiary": "#722b00",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9fa",
+                        "tertiary-container": "#983c00",
+                        "on-error": "#ffffff",
+                        "secondary": "#006e25",
+                        "tertiary-fixed-dim": "#ffb694",
+                        "on-primary-container": "#bbd0ff",
+                        "surface-container-low": "#f3f4f5",
+                        "primary": "#003f87"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold text-blue-800 dark:text-blue-300 font-headline">Salud Integral</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-inter text-[11px] uppercase tracking-wider text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">About Us</a>
+<a class="font-inter text-[11px] uppercase tracking-wider text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Patient Portal</a>
+<a class="font-inter text-[11px] uppercase tracking-wider text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Corporate Wellness</a>
+<a class="font-inter text-[11px] uppercase tracking-wider text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Blog</a>
+<a class="font-inter text-[11px] uppercase tracking-wider text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-700 pb-1" href="#">Medical Units</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden lg:block text-slate-600 font-label text-sm font-semibold hover:text-primary transition-colors">Login</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline font-bold text-sm shadow-sm scale-95 active:duration-100 hover:bg-primary-container transition-all">Book Appointment</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center overflow-hidden bg-surface">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20 grayscale" data-alt="high-end modern clinic interior with soft natural light, minimalist architectural lines, and premium furniture in a serene atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPG0qdiRro7DpffI7PSpS3wpRhPG2xx41GGA4Rb1f61K9C5Dl-cwUyxI12GUIxZBWS4mKKsHEfBjO6y3mGy2HFkC8bbJ1FU4TfSzCV-1v640GpDO52ulvkk56UWQd2xmE-ZKkuWvhcVIFZuh7SJFXhRh5kzvLPJoavL5cMC2f7N0h6sh8cwr4AGmXovlJcKjB2juhPu-W-SETAjfa3mU_TIxdFoRToic8YEqoY3PrNcMrlldzBSjnS8YMgBHeubc6wuwvkeQFSSQ"/>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-surface"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full py-20">
+<div class="max-w-2xl">
+<span class="font-label text-[11px] uppercase tracking-[0.15em] text-primary font-bold mb-4 block">Concierge Healthcare Excellence</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-tight mb-8">
+                        Precision Medicine, <br/>
+<span class="text-primary">Human Perspective.</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant mb-10 leading-relaxed max-w-lg">
+                        Access world-class specialists and diagnostic technology within a sanctuary of clinical excellence.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-headline font-bold text-lg hover:shadow-xl transition-all flex items-center gap-2">
+<span>Explore Specializations</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant/30 text-primary px-8 py-4 rounded-full font-headline font-bold text-lg hover:bg-surface-container-low transition-all">
+                            Virtual Tour
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Specialties Grid (The Core Request) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="font-label text-[11px] uppercase tracking-wider text-primary font-bold mb-2 block">Our Clinical Core</span>
+<h2 class="font-headline text-4xl font-bold text-on-surface">Medical Specialties</h2>
+</div>
+<div class="flex gap-2">
+<button class="p-3 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-3 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Bento-style Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Specialty Card 1 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl transition-all hover:translate-y-[-4px] hover:shadow-2xl hover:shadow-primary/5">
+<div class="w-14 h-14 bg-primary-fixed rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">cardiology</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Cardiology</h3>
+<p class="font-body text-sm text-on-surface-variant mb-8 leading-relaxed">Advanced cardiovascular screening and rhythm management with top-tier specialists.</p>
+<button class="w-full py-3 rounded-lg border border-primary text-primary font-headline font-bold text-sm hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-2">
+<span>Book Consultation</span>
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+</button>
+</div>
+<!-- Specialty Card 2 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl transition-all hover:translate-y-[-4px] hover:shadow-2xl hover:shadow-primary/5">
+<div class="w-14 h-14 bg-secondary-container rounded-xl flex items-center justify-center text-on-secondary-container mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">neurology</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Neurology</h3>
+<p class="font-body text-sm text-on-surface-variant mb-8 leading-relaxed">Comprehensive care for neurological health, focusing on early detection and modern therapy.</p>
+<button class="w-full py-3 rounded-lg border border-primary text-primary font-headline font-bold text-sm hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-2">
+<span>Book Consultation</span>
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+</button>
+</div>
+<!-- Specialty Card 3 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl transition-all hover:translate-y-[-4px] hover:shadow-2xl hover:shadow-primary/5">
+<div class="w-14 h-14 bg-tertiary-fixed rounded-xl flex items-center justify-center text-on-tertiary-fixed-variant mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">pediatrics</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Pediatrics</h3>
+<p class="font-body text-sm text-on-surface-variant mb-8 leading-relaxed">High-end pediatric environment designed to make healthcare a positive journey for children.</p>
+<button class="w-full py-3 rounded-lg border border-primary text-primary font-headline font-bold text-sm hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-2">
+<span>Book Consultation</span>
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+</button>
+</div>
+<!-- Specialty Card 4 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl transition-all hover:translate-y-[-4px] hover:shadow-2xl hover:shadow-primary/5">
+<div class="w-14 h-14 bg-primary-fixed rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">biotech</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Diagnostics</h3>
+<p class="font-body text-sm text-on-surface-variant mb-8 leading-relaxed">State-of-the-art laboratory and imaging with rapid digital result delivery via portal.</p>
+<button class="w-full py-3 rounded-lg border border-primary text-primary font-headline font-bold text-sm hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-2">
+<span>Schedule Test</span>
+<span class="material-symbols-outlined text-lg">biotech</span>
+</button>
+</div>
+</div>
+<div class="mt-16 flex justify-center">
+<button class="flex items-center gap-3 text-primary font-headline font-bold group">
+<span class="border-b-2 border-primary pb-1 group-hover:border-primary-container group-hover:text-primary-container transition-all">View All 24 Medical Units</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Quick Actions Navigation -->
+<section class="py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline text-3xl font-bold mb-6">Immediate Access to Care</h2>
+<div class="space-y-4">
+<div class="flex items-start gap-5 p-6 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-3xl p-3 bg-white rounded-xl shadow-sm">emergency_home</span>
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Emergency Services</h4>
+<p class="text-on-surface-variant text-sm">24/7 Level 1 Emergency trauma care and rapid stabilization units.</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-outline group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+<div class="flex items-start gap-5 p-6 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-secondary text-3xl p-3 bg-white rounded-xl shadow-sm">video_chat</span>
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Telehealth Sanctuary</h4>
+<p class="text-on-surface-variant text-sm">Connect with our specialists from anywhere via encrypted video sessions.</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-outline group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+<div class="flex items-start gap-5 p-6 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-tertiary text-3xl p-3 bg-white rounded-xl shadow-sm">location_on</span>
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Clinic Locations</h4>
+<p class="text-on-surface-variant text-sm">Find the nearest Salud Integral center for in-person concierge visits.</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-outline group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="relative rounded-3xl overflow-hidden aspect-square md:aspect-auto h-full min-h-[400px]">
+<img class="w-full h-full object-cover" data-alt="compassionate female doctor in professional white coat talking to a patient in a light-filled modern consultation room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZtGpIYUQCQeuIrT_SbrDlmyRh7qyF7RZ0s6TVX4F7SMAfASHS7med62EDKsyhmj9KIwt30jPIbM93chXubiBwTQzAyK2SpFrZPZj3hpPDwsUyTDq1H_x2kwR-oKk1fgiBlIWjPiPl4U69xx59vuznWqzAqbU4oLuDjfxrO_GDgGspwkoDgL5fiOR9p18XMbOQdh51N8-jquSUTO3PqFH_ZMLvLZAp0a-1qYiHo_hR1_bJG7dw2pGBpxkh8jUvkQETf94rB7a5rw"/>
+<div class="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl">
+<div class="flex items-center gap-4 mb-3">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-xs font-label uppercase tracking-widest font-bold text-secondary">Now Accepting New Patients</span>
+</div>
+<p class="font-headline font-bold text-lg leading-snug">Average wait time for primary care appointments is under 48 hours.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Community -->
+<section class="py-24 bg-primary-container text-on-primary-container">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<h2 class="font-headline text-4xl font-extrabold mb-6">Stay Informed on Wellness</h2>
+<p class="font-body text-lg mb-10 opacity-90">Join our monthly newsletter for clinical insights, wellness strategies, and corporate health updates from our leading medical team.</p>
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 px-8 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/40" placeholder="Your professional email" type="email"/>
+<button class="px-10 py-4 rounded-full bg-white text-primary font-headline font-bold hover:bg-primary-fixed transition-all">Subscribe Now</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-manrope font-bold text-slate-800 dark:text-slate-200 text-xl mb-6">Salud Integral</div>
+<p class="font-inter text-xs text-slate-500 leading-loose">© 2024 Salud Integral. <br/>High-End Concierge Healthcare. <br/>Santo Domingo, Dominican Republic.</p>
+</div>
+<div>
+<h5 class="font-headline font-bold text-slate-800 dark:text-slate-200 text-sm mb-6">Services</h5>
+<ul class="space-y-4">
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Emergency Care</a></li>
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Diagnostic Imaging</a></li>
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Laboratory Services</a></li>
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Specialized Clinics</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline font-bold text-slate-800 dark:text-slate-200 text-sm mb-6">Company</h5>
+<ul class="space-y-4">
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Careers</a></li>
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Medical Staff</a></li>
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Contact Support</a></li>
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline font-bold text-slate-800 dark:text-slate-200 text-sm mb-6">Privacy</h5>
+<ul class="space-y-4">
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Data Protection</a></li>
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Patient Rights</a></li>
+<li><a class="font-inter text-xs text-slate-500 hover:text-blue-500 underline opacity-80 hover:opacity-100 transition-all" href="#">Cookie Settings</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
