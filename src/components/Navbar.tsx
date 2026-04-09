@@ -16,6 +16,7 @@ const navItems = [
   { name: 'Sobre Nosotros', path: '/about' },
   { name: 'Nuestro Personal', path: '/staff' },
   { name: 'Blog', path: '/blog' },
+  { name: 'Contacto', path: '/contact' },
 ];
 
 export default function Navbar() {

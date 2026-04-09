@@ -159,6 +159,61 @@ export default function Contact() {
           </div>
 
         </div>
+
+        {/* Google Maps Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="mt-20"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <MapPin className="text-primary" size={20} />
+            <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em]">Nuestra Ubicación</span>
+          </div>
+          <h2 className="text-2xl md:text-4xl font-black font-headline tracking-tighter text-on-surface mb-8">
+            Encuéntrenos en Santo Domingo.
+          </h2>
+
+          <div className="relative rounded-3xl overflow-hidden border border-outline-variant/10 shadow-sm" style={{ height: '480px' }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15140.209385947348!2d-69.99076534999999!3d18.435932249999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf8a03ea62ea83%3A0x948ec8938930d077!2sSalud%20Integral!5e0!3m2!1ses-419!2sdo!4v1775761415755!5m2!1ses-419!2sdo"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Ubicación de Salud Integral en Google Maps"
+              className="w-full h-full"
+            />
+            {/* Floating address card */}
+            <div className="absolute bottom-6 left-6 bg-white p-6 rounded-2xl shadow-xl border border-outline-variant/10 max-w-[280px]">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0">
+                  <MapPin size={18} />
+                </div>
+                <div>
+                  <p className="font-black text-on-surface text-sm">Salud Integral</p>
+                  <p className="text-[9px] font-black uppercase tracking-widest text-primary">Sede Central</p>
+                </div>
+              </div>
+              <p className="text-xs text-on-surface-variant font-medium leading-relaxed">
+                Av. Churchill, Suites 204<br />Santo Domingo, RD
+              </p>
+              <a
+                href="https://maps.google.com/?q=Salud+Integral+Santo+Domingo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-[9px] font-black text-primary uppercase tracking-widest hover:underline"
+              >
+                Abrir en Google Maps →
+              </a>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </div>
   );
